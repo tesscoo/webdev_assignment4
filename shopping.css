@@ -1,0 +1,98 @@
+<!--This is the spreadsheet for my html form-->
+
+html, body, h1, form, fieldset, legend, ol, li {
+		margin: 0;
+		padding: 0;
+		}
+
+body {
+		text-align: left;
+		background: #cccccc;
+		color: #000000;
+		font-family: arial, sans-serif;
+		font-size: 0.8em;
+		padding: 30px;
+		}
+
+h1 {text-align: center;
+		font-family: arial, sans-serif;
+		font-size: 1.7em;
+		text-shadow: 2px 2px 2px white;
+		padding:20px;
+		}
+
+form#about {
+		background: #ffffff;
+		padding: 20px;
+		width: 500px;
+		margin: 0 auto;
+		border-radius: 25px;
+		}
+
+form#about fieldset {
+		border: none;
+		margin-bottom:5px;}
+
+form#about ul li {
+		list-style: none;
+		border-bottom: solid;
+		border-width: 1px;
+		padding-bottom: 10px;
+		border-color: #dcdcdc;}
+
+form#about legend {
+		font-family: Times, serif;
+		font-size: 1.2em;
+		text-align: center;}
+
+form#about textarea:focus {background:#dcdcdc;}
+
+form#about button#submit {background-image: url(cat.png);
+		background-repeat: no-repeat;
+		color:transparent;
+		background-color: white;
+		width: 80px;
+		height: 70px;
+		border:none;
+		float:right;}
+form#about button#submit:hover {
+		cursor:pointer;
+		background-image: none;
+		color:black;
+		}
+
+form#about button#reset {background-image: url(cat2.png);
+		background-repeat: no-repeat;
+		background-color:white;
+		border: none;
+		color: transparent;
+		float:left;
+		width: 80px;
+		height: 70px;
+		}
+
+form#about button#reset:hover {cursor:pointer;
+		background-image: none;
+		color:black;
+		}
+
+#footer {padding-top: 20px;
+		padding-bottom: 20px;
+		color: black;
+		}
+
+#end {font-size: 0.8em;
+		text-align: center;
+		}
+
+a:link {text-decoration: none;
+		color:#CC3399;}
+
+a:visited {text-decoration: none;
+		color: #CC99FF;}
+
+a:hover, a:focus {text-decoration: underline
+			color: #CC99CC;}
+
+a:active {text-decoration: underline
+			color: #CC99CC;}

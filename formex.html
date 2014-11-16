@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 4</title>
+	<link rel="stylesheet" href="shopping.css">
+</head>
+
+<body>
+	<a href="../index.html" style="float:right;color:black;text-decoration:underline;">Back to Assignment Page</a>
+
+<h1>My Shopping Cart</h1>
+
+	<form id="about" autocomplete="on" novalidate>
+
+	<fieldset>
+		<legend>B A S I C . I N F O</legend>
+		<ul>
+			<li>
+				<label for="name">Full name</label>
+				<input id="name" name="flname" type="text" placeholder="Last name, first name" required autofocus>
+			</li><br>
+
+			<li>
+				<label for="phone">Phone number</label>
+				<input id="phone" name="phone" type="tel" placeholder="***-***-****">
+			</li><br>
+
+			<li>
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" placeholder="name@email.com" required>
+			</li>
+		</ul>
+	</fieldset>
+
+	<fieldset>
+		<legend>L I F E</legend>
+		<ul>
+			<li>
+				<label for="bday">Birthday</label>
+				<input id="bday" name="bday" type="date">
+			</li><br>
+
+			<li>
+				<label for="birthtime">Time of Birth</label>
+				<input id="birthtime" name="birthtime" type="time">
+			</li><br>
+
+			<li>
+				<label for="birthplace">Place of Birth</label>
+				<input id="birthplace" name="birthplace" type="text" placeholder="e.g. Laguna Hills, CA">
+			</li><br>
+
+			<li>
+				<label for="status">Marital Status</label><br><br>
+				<input type="radio" name="status" value="single">Single<br>
+				<input type="radio" name="status" value="married">Married<br>
+				<input type="radio" name="status" value="comp">It's Complicated<br>
+			</li>
+	</fieldset>
+
+	<fieldset>
+		<legend>E X T R A S</legend>
+		<ul>
+			<li>
+				<label for=hobbies>What are some of your hobbies? Please select...</label><br><br>
+				<input type=checkbox name=hobbies value=reading checked>Reading<br>
+				<input type=checkbox name=hobbies value=bikes>Riding Bikes<br>
+				<input type=checkbox name=hobbies value=exercising>Exercising<br>
+				<input type=checkbox name=hobbies value=shopping>Shopping<br>
+				<input type=checkbox name=hobbies value=exploring>Exploring new places<br>
+				<input type=checkbox name=hobbies value=museums>Going to museums<br>
+				<input type=checkbox name=hobbies value=climbing>Rock climbing<br>
+				<input type=checkbox name=hobbies value=studying>Studying<br>
+				<input type=checkbox name=hobbies value=drawing>Drawing<br>
+				<input type=checkbox name=hobbies value=collect>Collecting things<br>
+				<input type=checkbox name=hobbies value=religion>Going to church/temple/mosque/etc
+			</li><br>
+
+			<li>
+				<label for=color>Favorite Color</label><br><br>
+				<input id=color name=color type=color placeholder="e.g. Blue">
+			</li><br>
+
+			<li>
+				<label for=dropdown>Favorite Animal</label><br><br>
+				<select>
+					<option value="select" selected>Please Select...</option>
+					</optgroup>
+					<optgroup label="Amphibians">
+						<option value="frog">Frog</option>
+						<option value="toad">Toad</option>
+						<option value="newt">Newt</option>
+					</optgroup>
+					<optgroup label="Birds">
+						<option value="eagle">Eagle</option>
+						<option value="hawk">Hawk</option>
+						<option value="sparrow">Sparrow</option>
+					</optgroup>
+					<optgroup label="Mammals">
+						<option value="lion">Lion</option>
+						<option value="giraffe">Giraffe</option>
+						<option value="elephant">Elephant</option>
+					</optgroup>
+					<optgroup label="Fish">
+						<option value="clown">Clown Fish</option>
+						<option value="shark">Shark</option>
+						<option value="salmon">Salmon</option>
+					</optgroup>
+				</select>
+			</li><br>
+
+			<li>
+				<label for=siblings>How many siblings do you have?</label><br><br>
+				<input id=siblings type=number name=siblings min=0 max=15>
+			</li><br>
+
+			<li>
+				<label for=scale>On a scale of 1-10, how much did you enjoy this questionnaire?</label><br><br>
+				<input id=scale type=range name=scale min=1 max=10>
+			</li>
+		</ul>
+		<button type=reset id="reset">RESET!</button>
+		<button type=submit id="submit">SUBMIT!</button><br><br><br>
+
+
+	</fieldset>
+
+	</form>
+
+<br>
+
+<div id="footer">
+	<footer>
+		<p id="end">This website was created by <a href="mailto: tli207@nyu.edu">Tess Iskra</a>.<br>
+		I do not own the images on this page.
+	</footer>
+</div> <!-- end of footer div -->
+
+
+
+</body>
+</html>
