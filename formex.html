@@ -6,126 +6,156 @@
 	<meta charset="utf-8">
 	<title>Assignment 4</title>
 	<link rel="stylesheet" href="shopping.css">
+	<script type="text/javascript" src="shopping.js"></script>
 </head>
 
-<body>
+<body onload="date();welcomeCookie();" >
 	<a href="../index.html" style="float:right;color:black;text-decoration:underline;">Back to Assignment Page</a>
 
-<h1>My Shopping Cart</h1>
+<h1>Order Form</h1>
 
-	<form id="about" autocomplete="on" novalidate>
+	<form id="about" name="orderForm" autocomplete="on" onsubmit="receipt()">
 
 	<fieldset>
-		<legend>B A S I C . I N F O</legend>
+		<legend></legend>
 		<ul>
-			<li>
-				<label for="name">Full name</label>
-				<input id="name" name="flname" type="text" placeholder="Last name, first name" required autofocus>
-			</li><br>
-
-			<li>
-				<label for="phone">Phone number</label>
-				<input id="phone" name="phone" type="tel" placeholder="***-***-****">
-			</li><br>
-
-			<li>
-				<label for="email">Email</label>
-				<input id="email" name="email" type="email" placeholder="name@email.com" required>
-			</li>
+				<li>
+				<label for="date">Current Date:</label><Br>
+				<span id="date"></span>
+				</li>
 		</ul>
-	</fieldset>
 
-	<fieldset>
-		<legend>L I F E</legend>
+		<legend>Customer Information</legend>
+		<ul>
+				<li>
+				<label for="fullname">Full Name</label>
+				<input id="fullname" name="fullname" type="text" placeholder="Full Name" required  onchange="validateName()" autoselect>
+				</li><br>
+
+				<li>
+				<label for="address">Street Address</label>
+				<input id="address" name="address" type="text" placeholder="Address" required>
+				</li><br>
+
+				<li>
+				<label for="city">City</label>
+				<input id="city" name="city" type="text" placeholder="City" required>
+				</li><br>
+
+				<li>
+				<label for="state">State</label>
+				<input id="state" name="state" type="text" placeholder="State" required>
+				</li><br>
+
+				<li>
+				<label for="zip">Zip Code</label>
+				<input id="zip" name="zip" type="text" placeholder="Zip" onchange="validateZip()" required>
+				</li><br>
+
+				<li>
+				<label for="email" validate>Email</label>
+				<input id="email" name="email" type="text" placeholder="email@gmail.com" onchange="validateEmail()" required>
+				</li><br>
+
+				<li>
+				<label for="phone">Phone Number</label>
+				<input id="phone" name="phone" type="text" placeholder="***-***-****">
+				</li><br>
+		</ul>
+
+		<legend>Select a Product</legend>
 		<ul>
 			<li>
-				<label for="bday">Birthday</label>
-				<input id="bday" name="bday" type="date">
-			</li><br>
-
-			<li>
-				<label for="birthtime">Time of Birth</label>
-				<input id="birthtime" name="birthtime" type="time">
-			</li><br>
-
-			<li>
-				<label for="birthplace">Place of Birth</label>
-				<input id="birthplace" name="birthplace" type="text" placeholder="e.g. Laguna Hills, CA">
-			</li><br>
-
-			<li>
-				<label for="status">Marital Status</label><br><br>
-				<input type="radio" name="status" value="single">Single<br>
-				<input type="radio" name="status" value="married">Married<br>
-				<input type="radio" name="status" value="comp">It's Complicated<br>
-			</li>
-	</fieldset>
-
-	<fieldset>
-		<legend>E X T R A S</legend>
-		<ul>
-			<li>
-				<label for=hobbies>What are some of your hobbies? Please select...</label><br><br>
-				<input type=checkbox name=hobbies value=reading checked>Reading<br>
-				<input type=checkbox name=hobbies value=bikes>Riding Bikes<br>
-				<input type=checkbox name=hobbies value=exercising>Exercising<br>
-				<input type=checkbox name=hobbies value=shopping>Shopping<br>
-				<input type=checkbox name=hobbies value=exploring>Exploring new places<br>
-				<input type=checkbox name=hobbies value=museums>Going to museums<br>
-				<input type=checkbox name=hobbies value=climbing>Rock climbing<br>
-				<input type=checkbox name=hobbies value=studying>Studying<br>
-				<input type=checkbox name=hobbies value=drawing>Drawing<br>
-				<input type=checkbox name=hobbies value=collect>Collecting things<br>
-				<input type=checkbox name=hobbies value=religion>Going to church/temple/mosque/etc
-			</li><br>
-
-			<li>
-				<label for=color>Favorite Color</label><br><br>
-				<input id=color name=color type=color placeholder="e.g. Blue">
-			</li><br>
-
-			<li>
-				<label for=dropdown>Favorite Animal</label><br><br>
-				<select>
-					<option value="select" selected>Please Select...</option>
+				<label for="product">Product</label>
+				<select id="product"  onchange="picture()" required>
+					<option value="" selected>Please Select</option>
+					<optgroup label="Paintings">
+						<option value="dancers">Dancers ($400ea)</option>
+						<option value="flower">Flower ($300ea)</option>
+						<option value="building">Building ($250ea)</option>
 					</optgroup>
-					<optgroup label="Amphibians">
-						<option value="frog">Frog</option>
-						<option value="toad">Toad</option>
-						<option value="newt">Newt</option>
-					</optgroup>
-					<optgroup label="Birds">
-						<option value="eagle">Eagle</option>
-						<option value="hawk">Hawk</option>
-						<option value="sparrow">Sparrow</option>
-					</optgroup>
-					<optgroup label="Mammals">
-						<option value="lion">Lion</option>
-						<option value="giraffe">Giraffe</option>
-						<option value="elephant">Elephant</option>
-					</optgroup>
-					<optgroup label="Fish">
-						<option value="clown">Clown Fish</option>
-						<option value="shark">Shark</option>
-						<option value="salmon">Salmon</option>
+					<optgroup label="Photographs">
+						<option value="bird">Bird ($100ea)</option>
+						<option value="statue">Statue ($150ea)</option>
+						<option value="shadow">Shadow ($175ea)</option>
 					</optgroup>
 				</select>
+
+				<select onchange="subtotal()" id="quantity" required>
+					<option value="">Quantity</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+
+				<input id="producttotal" name="producttotal" type="text" placeholder="0.00"><br><br>
+
+				<span id="photo" style="overflow:auto;"></span>
 			</li><br>
 
 			<li>
-				<label for=siblings>How many siblings do you have?</label><br><br>
-				<input id=siblings type=number name=siblings min=0 max=15>
+				<label for="tax">Tax (4%)</label>
+				<input id="tax" name="tax" type="text" placeholder="0.00">
 			</li><br>
 
 			<li>
-				<label for=scale>On a scale of 1-10, how much did you enjoy this questionnaire?</label><br><br>
-				<input id=scale type=range name=scale min=1 max=10>
+				<label for="shipping">Shipping</label><br><br>
+				<div id="radios">
+				<input type="radio" name="shipping" required value="standard" id="standard">Standard (3-5 days) $7.95<br><br>
+				<input type="radio" name="shipping" value="express" id="express">Express (2 days) $9.95<br><br>
+				<input type="radio" name="shipping" value="nextDay"id="nextDay">Next Day (1 day) $12.95<br>
+			</div><br>
 			</li>
 		</ul>
-		<button type=reset id="reset">RESET!</button>
-		<button type=submit id="submit">SUBMIT!</button><br><br><br>
 
+			<legend>Select a Payment Option</legend>
+			<ul>
+			<li>
+				<label for="card">Card Type</label><br><br>
+				<div id="radios" required>
+				<input type="radio" name="card" required value="mastercard" id="mastercard" onchange="choosePay()">Mastercard<br><Br>
+				<input type="radio" name="card" value="visa" id="visa" onchange="choosePay()">Visa<br><Br>
+				<input type="radio" name="card" value="aex" id="aex" onchange="choosePay()">American Express<br><br>
+				<input type="radio" name="card" value="discover" id="discover" onchange="choosePay()">Discover<br>
+			</div><br>
+			</li><br>
 
+			<li style="overflow:auto;">
+				<label for="total">Total</label>
+				<input id="total" name="total" type="text" placeholder="Total"><br><Br>
+				<button type="button" style="float:right;" onclick=calctotal()>Calculate Total</button>
+			</li>
+
+			</ul>
+
+			<legend>Miscellaneous</legend>
+			<ul>
+			<li style="overflow:auto;">
+				<label for="comments">Comments (Optional)</label>
+				<textarea id="comments" name="comments" placeholder="Enter comments here" style="height:200px;"></textarea>
+			</textarea><br>
+			</li>
+			</ul>
+
+			<ul>
+			<li>
+				<label for="recs">How did you hear about us?</label><br><br>
+				<div id="checkboxes">
+				<input type=checkbox name="recs" value="Internet" checked>Internet<br><br>
+				<input type=checkbox name="recs" value="Magazine">Magazine<br><br>
+				<input type=checkbox name="recs" value="Newspaper">Newspaper<br><br>
+				<input type=checkbox name="recs" value="Friend">Friend<br><br>
+				<input type=checkbox name="recs" value="Other">Other<br>
+			</div>
+			</li>
+
+			<div style="margin-top:10px">
+				<button type="submit" style="clear:both;float:right;border-radius:10px;background-color:#CC3399;font-size:1em;">Checkout</button>
+				<button type=reset style=";border-radius:10px;background-color:#CC3399;font-size:1em;">Reset</button>
+			</div>
+			</ul>
 	</fieldset>
 
 	</form>
@@ -134,8 +164,7 @@
 
 <div id="footer">
 	<footer>
-		<p id="end">This website was created by <a href="mailto: tli207@nyu.edu">Tess Iskra</a>.<br>
-		I do not own the images on this page.
+		<p id="end">This website was created by <a href="mailto: tli207@nyu.edu">Tess Iskra</a>.
 	</footer>
 </div> <!-- end of footer div -->
 
