@@ -14,10 +14,23 @@ body {
 		padding: 30px;
 		}
 
+input, textarea {
+		float:right;
+}
+
+
+div#radios input {
+		clear: both;
+}
+
+div#checkboxes input {
+		clear:both;
+}
+
+
 h1 {text-align: center;
-		font-family: arial, sans-serif;
-		font-size: 1.7em;
-		text-shadow: 2px 2px 2px white;
+		font-family: Baskerville, sans-serif;
+		font-size: 2em;
 		padding:20px;
 		}
 
@@ -43,7 +56,7 @@ form#about ul li {
 form#about legend {
 		font-family: Times, serif;
 		font-size: 1.2em;
-		text-align: center;}
+		margin-left: 15px;}
 
 form#about textarea:focus {background:#dcdcdc;}
 
